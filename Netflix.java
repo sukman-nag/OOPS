@@ -137,7 +137,46 @@ class UserThree implements Netflix {
         // System.out.println(".............................................");
     }
 }
+class UserFour implements Netflix {
+    private String userName;
+    private int userAge;
+    private String userEmail;
 
+    public UserFour() {
+
+    }
+
+    public UserFour(String userName, int userAge, String userEmail) {
+        this.userName = userName;
+        this.userAge = userAge;
+        this.userEmail = userEmail;
+    }
+
+    @Override
+    public void moviesName() {
+        System.out.println("Watching Saiyaara");
+    }
+
+    @Override
+    public void seriesName() {
+        System.out.println("Watching Game Of thrones ");
+
+    }
+
+    @Override
+    public void documentryName() {
+        System.out.println("Watching Marine life documentry name ");
+
+    }
+    // @Override
+
+    public void printDetails() {
+        System.out.println("User Name3 is " + userName);
+        System.out.println("User Age is " + userAge);
+        System.out.println("User email ID is " + userEmail);
+        // System.out.println(".............................................");
+    }
+}
 class Helper {
     public UserOne creatFirstImplObject(String userName, int userAge, String userEmail) {
         UserOne one = new UserOne(userName, userAge, userEmail);
@@ -152,6 +191,10 @@ class Helper {
 
     public UserThree creatthirdImplObject(String userName, int userAge, String userEmail) {
         UserThree one = new UserThree(userName, userAge, userEmail);
+        return one;
+    }
+     public UserFour creatfourImplObject(String userName, int userAge, String userEmail) {
+        UserFour one = new UserFour(userName, userAge, userEmail);
         return one;
     }
 }
